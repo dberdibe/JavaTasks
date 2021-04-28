@@ -4,8 +4,8 @@ import java.util.Arrays;
 import java.util.Random;
 
 public class Teacher {
-    String name;
-    String lesson;
+    private String name;
+    private String lesson;
 
     public String getName() {
         return name;
@@ -35,11 +35,10 @@ public class Teacher {
             case 4:
                 note = "хорошо";
                 break;
-            case 5:
+            default:
                 note = "отлично";
                 break;
-            default:
-                note = "Unkown note";
+
         }
         System.out.println("Преподаватель " + getName() + " оценил студента с именем " + student.getName() + " по предмету " + lesson + " на оценку " + note);
 

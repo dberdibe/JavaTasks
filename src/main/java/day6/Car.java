@@ -8,9 +8,9 @@ package day6;
 //В методе main() класса Task1 создайте экземпляр автомобиля или мотоцикла, проверьте работу каждого метода.
 public class Car {
 
-    public int year;
-    public String colour;
-    public String model;
+    private int year;
+    private String colour;
+    private String model;
 
     public void info(){
         System.out.println("Это автомобиль");

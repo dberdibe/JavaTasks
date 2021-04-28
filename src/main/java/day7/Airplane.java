@@ -1,4 +1,6 @@
-package day6;
+package day7;
+
+import com.sun.prism.shader.AlphaOne_ImagePattern_AlphaTest_Loader;
 
 public class Airplane {
     private String producer;
@@ -18,6 +20,21 @@ public class Airplane {
     public void info(){
         System.out.println("Изготовитель:" +" " + producer + ", " + "год выпуска:" + " " + year + ", " + "длина:" + " " + length + ", " + "вес:" + " " + weight + ", " + "количество топлива в баке:" + " " + this.fuel);
     }
+
+    public static void compareAirplanes(Airplane airplaneOne, Airplane airplaneTwo){
+        if (airplaneOne.length > airplaneTwo.length){
+            System.out.println("Первый самолет длиннее");//когда вывожу строку ниже с сообщением, то тесты не проходят
+            //System.out.println("Самолет 1 длина " + airplaneOne.length + ", самолет 2 длина " + airplaneTwo.length);
+        }else if (airplaneOne.length < airplaneTwo.length){
+            System.out.println("Второй самолет длиннее");
+            //System.out.println("Самолет 1 длина " + airplaneOne.length + ", самолет 2 длина " + airplaneTwo.length);
+        }else {
+            System.out.println("Длины самолетов равны");
+            //System.out.println("Самолет 1 длина " + airplaneOne.length + ", самолет 2 длина " + airplaneTwo.length);
+        }
+
+    }
+
 
     public void fillUp(int n){
         fuel = fuel + n;
