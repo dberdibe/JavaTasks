@@ -17,10 +17,22 @@ public class Task2 {
         player4.run();
         Player player5 = new Player(result);
         player5.run();
-        //Player player6 = new Player(result);
+        Player player6 = new Player(result);
+        player6.run();
+        //for (int i = 0; i < result; i++) {
         //player6.run();
+        //}
+
+
+
+        Player player7 = new Player(result);
+        player7.run();
 
         Player.info();
+        System.out.println(Player.getCountPlayers());
+
+
+
 
     }
 }

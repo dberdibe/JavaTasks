@@ -27,8 +27,8 @@ public class Player {
             System.out.println("Игрок устал");
             countPlayers--;
             active = false;
-            info();
         }
+
     }
 
     public static void info(){
