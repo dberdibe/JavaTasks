@@ -20,7 +20,7 @@ public class User {
 
     public boolean isSubscribed(User user){
         for (User users : subscriptions){
-            if (users.getUsername().equals(user.getUsername())){
+            if (users.getUsername().equals(user.getUsername()) && user.getSubscriptions() == getSubscriptions()){
                 return true;
             }
         }
