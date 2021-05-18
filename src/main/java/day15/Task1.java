@@ -16,22 +16,24 @@ import java.util.Scanner;
 //
 //Возникающие исключения обрабатывать (try-catch), а не пробрасывать в сигнатуре метода (throws).
 public class Task1 {
-    public static void main(String[] args) throws FileNotFoundException {
-        File file = new File("/Users/daurenberdibekov/IdeaProjects/JavaMarathon2021/src/main/resources/shoes.csv");
-        Scanner scanner = new Scanner(file);
+    public static void main(String[] args){
+        try {
+            File file = new File("/Users/daurenberdibekov/IdeaProjects/JavaMarathon2021/src/main/resources/shoes.csv");
+            Scanner scanner = new Scanner(file);
 
-        File file1 = new File("/Users/daurenberdibekov/IdeaProjects/JavaMarathon2021/missingShoes");
-        PrintWriter pw = new PrintWriter(file1);
+            File file1 = new File("/Users/daurenberdibekov/IdeaProjects/JavaMarathon2021/missingShoes");
+            PrintWriter pw = new PrintWriter(file1);
 
-        while (scanner.hasNextLine()){
-            String[] list = scanner.nextLine().split(", ");
-            if (Integer.parseInt(list[2]) == 0){
-                pw.println(list[0]  + ", " + list[1] + ", " + list[2]);
+            while (scanner.hasNextLine()) {
+                String[] list = scanner.nextLine().split(", ");
+                if (Integer.parseInt(list[2]) == 0) {
+                    pw.println(list[0] + ", " + list[1] + ", " + list[2]);
+                }
             }
+            pw.close();
+            scanner.close();
+        } catch (FileNotFoundException e){
+            System.out.println("Файл не найден");
         }
-        pw.close();
-        scanner.close();
-
-
     }
 }

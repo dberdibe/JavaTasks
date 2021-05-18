@@ -22,15 +22,16 @@ public class Task1 {
         Scanner sc = null;
         try {
             sc = new Scanner(file);
+
+            int sum = 0;
+
+            while (sc.hasNextInt()){
+            sum += sc.nextInt();
+            }
+            System.out.println(sum);
         } catch (FileNotFoundException e) {
             System.out.println("Файл не найден");
         }
-        int sum = 0;
-
-        while (sc.hasNextInt()){
-            sum += sc.nextInt();
-        }
-        System.out.println(sum);
     }
 
     public static void printSumDigits2(){
@@ -39,15 +40,16 @@ public class Task1 {
         Scanner sc = null;
         try {
             sc = new Scanner(file);
+
+            int sum = 0;
+
+            while (sc.hasNextInt()){
+            sum += sc.nextInt();
+            }
+            System.out.println(sum);
         } catch (FileNotFoundException e) {
             System.out.println("Файл не найден");
         }
-        int sum = 0;
-
-        while (sc.hasNextInt()){
-            sum += sc.nextInt();
-        }
-        System.out.println(sum);
 
     }
 }
